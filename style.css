@@ -200,6 +200,8 @@ a:hover { color: var(--teal-dark); }
 .timeline-content h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .timeline-date { color: var(--teal-dark); font-size: 0.82rem; font-weight: 600; margin-bottom: 10px; }
 .timeline-excerpt { color: var(--muted); font-size: 0.9rem; }
+.timeline-list { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.9rem; }
+.timeline-list li { margin-bottom: 4px; }
 
 /* Skills */
 .skills-subhead { margin: 24px 0 12px; font-size: 1.05rem; }
