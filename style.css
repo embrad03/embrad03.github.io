@@ -51,9 +51,9 @@ a:hover { color: var(--teal-dark); }
 .topnav-links a.active { color: var(--pink); text-decoration: underline; }
 
 .page {
-  max-width: 1100px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 48px 48px;
   padding-left: calc(var(--sidebar-w) + 56px + 24px);
 }
 
@@ -147,8 +147,8 @@ a:hover { color: var(--teal-dark); }
 
 .entries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .card {
@@ -177,7 +177,7 @@ a:hover { color: var(--teal-dark); }
   font-size: 0.85rem;
   color: var(--navy);
 }
-.tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 .tech-item { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
 .tech-item h4 { font-size: 0.95rem; margin-bottom: 6px; color: var(--teal-dark); }
 .tech-item p { color: var(--muted); font-size: 0.88rem; }
