@@ -9,6 +9,8 @@
   --text: #2b2b2b;
   --muted: #6b6b6b;
   --border: #ffdad8;
+  --topnav-h: 64px;
+  --sidebar-w: 240px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,11 +27,17 @@ a { color: var(--teal); text-decoration: none; }
 a:hover { color: var(--teal-dark); }
 
 /* Top banner nav */
-.topnav { background: var(--navy); }
+.topnav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
 .topnav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 24px;
+  height: var(--topnav-h);
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,17 +55,21 @@ a:hover { color: var(--teal-dark); }
   max-width: 1100px;
   margin: 0 auto;
   padding: 48px 24px;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 56px;
-  align-items: stretch;
+  padding-left: calc(var(--sidebar-w) + 56px + 24px);
 }
 
 /* Sidebar */
 .sidebar {
+  position: fixed;
+  top: var(--topnav-h);
+  left: 0;
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--topnav-h));
+  overflow-y: auto;
   background: var(--pink);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 28px 20px;
+  z-index: 40;
 }
 .author-box {
   text-align: center;
@@ -83,7 +95,7 @@ a:hover { color: var(--teal-dark); }
 .see-more a { font-weight: 600; color: var(--teal-dark); }
 
 /* Main */
-.main { flex: 1; min-width: 0; }
+.main { min-width: 0; }
 
 .intro {
   margin-bottom: 48px;
@@ -149,7 +161,13 @@ a:hover { color: var(--teal-dark); }
 .footer { text-align: center; padding: 32px 0 0; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
 
 @media (max-width: 800px) {
-  .page { grid-template-columns: 1fr; }
+  .page { padding-left: 24px; }
+  .sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-bottom: 32px;
+  }
   .author-social { flex-direction: row; justify-content: center; flex-wrap: wrap; }
   .topnav-inner { justify-content: center; text-align: center; }
 }
