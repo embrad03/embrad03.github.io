@@ -63,8 +63,8 @@ a:hover { color: var(--teal-dark); }
   position: fixed;
   top: var(--topnav-h);
   left: 0;
+  bottom: 0;
   width: var(--sidebar-w);
-  height: calc(100vh - var(--topnav-h));
   overflow-y: auto;
   background: var(--pink);
   border-radius: 0;
