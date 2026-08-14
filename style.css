@@ -103,6 +103,13 @@ a:hover { color: var(--teal-dark); }
   color: var(--muted);
   font-size: 0.95rem;
 }
+.intro-video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #000;
+}
 
 /* Resume */
 .resume-intro { color: var(--muted); font-size: 0.9rem; margin-bottom: 14px; }
